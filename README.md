@@ -4,7 +4,7 @@
 d3.js based choropleth map of where NHL players are playing during the lockout.  Scale based on the numbers of players
 that are playing in each country.
 
-[screenshot](https://raw.github.com/nstehr/NHL-Lockout-Map/master/screenshot.png)
+![screenshot](https://raw.github.com/nstehr/NHL-Lockout-Map/master/screenshot.png)
 
 ## Author
 
