@@ -1,3 +1,5 @@
+#Generates the data.json used to supply the map visualization
+
 import urllib2
 import json
 from BeautifulSoup import BeautifulSoup,Tag
