@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Where'd They Go?</title>
+    
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type='text/javascript' src='static/libs/d3.js'></script>
+    <script type="text/javascript" src="static/libs/knockout-2.1.0.js"></script>
+	<script type="text/javascript" src="static/libs/kendo.web.min.js"></script>
+	<script type="text/javascript" src="static/libs/knockout-kendo.min.js"></script>
+   
+    <link href="static/libs/colorbrewer.css" rel="stylesheet" type="text/css"/>
+	<link href="static/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="static/libs/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/libs/kendo.default.min.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<div class="container">
+<body class="preview" data-spy="scroll" data-target=".subnav" data-offset="50">
+		
+		<div class="row">
+		  <span class="span12"><h1>Where'd They Go?</h1></span>
+		</div>
+		
+			<div class="row">
+				<div class="span12">
+				 <p class="lead">Where NHL players have been spending their time during the 2012 Lockout</p>
+				 <p class="lead"><em>Click country for details...</em></p>
+				</div>
+					<div class="row">
+						<div class="span9"id="map"></div>
+						<div class="span3">
+							
+							<div data-bind="kendoGrid: players"> 
+							<div class="k-grouping-header"><h3 data-bind="text: countryName"></h3></div>
+							</div>
+						</div>
+					</div>			
+	
+	<script type='text/javascript' src='static/visualize.js'></script>
+</body>
+</div>
+
+</html>
+   
