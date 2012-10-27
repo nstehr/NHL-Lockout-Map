@@ -26,7 +26,7 @@
 		
 			<div class="row">
 				<div class="span12">
-				 <p class="lead">Where NHL players have been spending their time during the 2012 Lockout</p>
+				 <p class="lead">Where NHL players have been spending their time during the 2012 <del>European Vacation</del> Lockout</p>
 				 <p class="lead"><em>Click country for details...</em></p>
 				</div>
 					<div class="row">
@@ -34,7 +34,10 @@
 						<div class="span3">
 							
 							<div data-bind="kendoGrid: players"> 
-							<div class="k-grouping-header"><h3 data-bind="text: countryName"></h3></div>
+							<div class="k-grouping-header">
+								<h3 data-bind="text: countryName"></h3>
+								<strong><span data-bind="text: count"></span> players are here</strong>
+							</div>
 							</div>
 						</div>
 					</div>			

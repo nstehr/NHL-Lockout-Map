@@ -4,7 +4,6 @@ function CountryModel() {
     this.players = ko.observableArray();
 
 	ko.bindingHandlers.kendoGrid.options = {
-	        scrollable: true,
 	        sortable: true,
 	        pageable: {pageSize: 10},
 	    };
@@ -20,6 +19,9 @@ $.getJSON('static/data.json', function(data) {
     $.getJSON('static/europe.json', function(countries){
 	countryData = data.countries;
 	renderMap(countries,countryData);
+	//initialize the table to all of Europe
+	initViewModel(countryData);
+	
 });
     
 });
@@ -67,6 +69,18 @@ function renderMap(countries,countryData){
 	            
 	});
 
+}
+
+function initViewModel(countryData){
+	viewModel.countryName("Europe");
+	var totalPlayerCount = 0;
+	var allPlayers = [];
+	$.each(countryData, function(countryName,value){
+	    totalPlayerCount = totalPlayerCount + value.count;	
+	    allPlayers = allPlayers.concat(value.players);
+	});
+	viewModel.count(totalPlayerCount);
+	viewModel.players(allPlayers);
 }
 
 function updateViewModel(countryName,countryValue){
